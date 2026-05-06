@@ -17,7 +17,7 @@ public class PersonController {
     personas[j + 1] = aux;
         }
     }
-    public void printPersonByName(Person[]personas){
+    public void sortPersonByName(Person[]personas){
         for (int i = 1; i < personas.length; i++) {
             Person aux = personas[i];
             int j = i - 1;

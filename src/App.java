@@ -1,3 +1,4 @@
+
 import controllers.PersonController;
 import models.Person;
 
@@ -12,30 +13,28 @@ public class App {
             new Person("Maria",  22),
             new Person( "Diego", 15),
         };
-        System.out.println("Personas sin ordenar edad:");
-
+        System.out.println("Personas sin ordenar:");
         for (Person person: personas){ 
             System.out.println(person);
         }
+
+        // ordenar
+        System.out.println("\nPersonas ordenadas por edad:\n");
+        PersonController PersonController = new PersonController();
         PersonController.sortPersonByAge(personas);
-        System.out.println();
-        System.out.println("Personas ordenadas por edad:");
-        for(Person person: personas){
-            System.out.println(person);
-        }
-        // Ordenar
-        // Imprimir
-
-
-      for (Person person: personas){ 
-        System.out.println(person);
-        }
-        PersonController.sortPersonByName(personas);
-        System.out.println();
-        System.out.println("Personas ordenadas por nombre:");
+        // imprimir
         for(Person person: personas){
             System.out.println(person);
         }
 
-}
+        // ordenar
+        System.out.println("\nPersonas ordenadas por nombre:\n");
+        PersonController PersonController2 = new PersonController();
+        PersonController2.sortPersonByName(personas);
+        //imprimir
+        for(Person person: personas){
+            System.out.println(person);
+        }
+
+    }
 }
