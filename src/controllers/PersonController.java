@@ -28,6 +28,30 @@ public class PersonController {
             personas[j + 1] = aux;
         }
     }
+    // Metodo ordena las personas segun el 
+    // promedio de sus notas con seleccion
+    public void sortPersonByAvrNotas(Person[]personas){
+        for (int i = 0; i < personas.length; i++){
+            int index = i;
+
+            for (int j = i + 1; j < personas.length; j++){
+                // Comparacion para actualizar el indice 
+                if (personas[j].getPromedio() < personas[index].getPromedio()){
+                    index = j; // actualizar el indice del menor elemento
+                }  
+            }
+            // Pregunto si el index != de i 
+            // entonces cambio posiciones
+            if (i != index){
+                Person aux = personas[i];
+                personas[i] = personas[index];
+                personas[index] = aux;
+            }
+        }
+    }
+    public void sortPersonByvalueName(Person[] personas) {
+        
+    }
     
 }
 
